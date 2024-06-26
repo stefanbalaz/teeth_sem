@@ -32,7 +32,7 @@ export default function Hero() {
           Dieser Textblock wäre optional, eigentlich genauso wie die beiden
           Überschriften oben. Man muss schauen, dass es nicht zu voll wird.
         </Paragraph>
-        <div className="flex flex-row items-center gap-4 custom-margin-b-third">
+        <div className="flex flex-row items-center gap-4">
           <Button buttonClassName="mb-0 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0">
             Termin online vereinbaren
           </Button>

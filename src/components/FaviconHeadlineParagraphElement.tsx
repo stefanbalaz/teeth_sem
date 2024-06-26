@@ -20,7 +20,7 @@ export default function FaviconHeadlineParagraphElement({
           {headlineText}
         </Headline3>
       </div>
-      <Paragraph paragraphClassName="mb-1 sm:mb-1 md:mb-1 lg:mb-2 xl:mb-7">
+      <Paragraph paragraphClassName="mb-0 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0">
         {paragraphText}
       </Paragraph>
     </div>

@@ -21,7 +21,7 @@ export default function FaviconHeadlineParagraphBlock({
   faviconHeadlineParagraphBlockClassName,
 }: FaviconHeadlineParagraphBlockProps) {
   const classes = twMerge(
-    "flex flex-col gap-8",
+    "flex flex-col gap-4 sm:gap-6 md:gap-12",
     faviconHeadlineParagraphBlockClassName
   );
 

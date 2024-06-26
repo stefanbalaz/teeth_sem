@@ -18,7 +18,9 @@ export default function HeadlineParagraph({
           {headlineText}
         </Headline3>
       </div>
-      <Paragraph paragraphClassName="">{paragraphText}</Paragraph>
+      <Paragraph paragraphClassName="mb-0 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0">
+        {paragraphText}
+      </Paragraph>
     </div>
   );
 }

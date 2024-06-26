@@ -14,7 +14,7 @@ export default function Competency() {
       <Headline1 headline1ClassName="w-3/4 text-center">
         Wir bieten vielfältige Leistungen
       </Headline1>
-      <Paragraph paragraphClassName="w-3/4 text-center">
+      <Paragraph paragraphClassName="w-3/4 text-center mb-0 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0">
         Was wir noch für Sie tun können? Neben dem Zahnersatz bietet unser
         kompetentes Team zahlreiche zahnmedizinische Leistungen an.
       </Paragraph>

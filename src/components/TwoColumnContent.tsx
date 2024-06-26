@@ -50,7 +50,7 @@ export default function TwoColumnContent() {
       <MoreInfoLink
         moreInfoText="Mehr zum Zahnersatz in unserer Praxis"
         moreInfoLink="https://google.com"
-        moreInfoClassName="mt-8"
+        moreInfoClassName="mt-8 mb-0 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0"
         visible={true}
       />
     </div>
