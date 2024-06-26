@@ -10,7 +10,6 @@ interface FaviconHeadlineParagraphElementProps {
 
 export default function FaviconHeadlineParagraphElement({
   headlineText,
-  headline3ClassName,
   paragraphText,
 }: FaviconHeadlineParagraphElementProps) {
   return (

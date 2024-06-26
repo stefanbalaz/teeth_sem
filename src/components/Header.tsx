@@ -19,12 +19,7 @@ export default function Header() {
   }, []);
 
   return (
-    <nav
-      className="
-      
-      custom-margin-b-min
-      "
-    >
+    <nav className="custom-margin-b-min">
       <div className="flex items-center justify-between text-customGreenDark">
         <Logo />
         <div className="hidden lg:block">
@@ -32,10 +27,14 @@ export default function Header() {
         </div>
         <IconButton
           variant="text"
+          /* size="md" */
           color="white"
           className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
+          placeholder="Placeholder text"
+          onPointerEnterCapture={() => {}}
+          onPointerLeaveCapture={() => {}}
         >
           {openNav ? (
             <XMarkIcon

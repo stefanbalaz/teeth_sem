@@ -1,4 +1,3 @@
-import React from "react";
 import FaviconHeadlineParagraphBlock from "./FaviconHeadlineParagraphBlock";
 import sectionImage from "../assets/woman.png";
 
@@ -14,16 +13,19 @@ export default function PictureBulletSection({
       headlineText: "Stefan Balaz",
       paragraphText:
         "1 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.",
+      buttonClassName: "",
     },
     {
       headlineText: "Anarella Moreno",
       paragraphText:
         "2 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.",
+      buttonClassName: "",
     },
     {
       headlineText: "Anarella Moreno",
       paragraphText:
         "2 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.",
+      buttonClassName: "",
     },
   ];
 
@@ -37,6 +39,7 @@ export default function PictureBulletSection({
     <FaviconHeadlineParagraphBlock
       faviconHeadlineParagraphBlockArray={faviconHeadlineParagraphBlockArray}
       contentButtonBlockClassName=""
+      /* buttonClassName="" */
     />
   );
 

@@ -13,6 +13,7 @@ interface FaviconHeadlineParagraphBlockArrayProps {
 interface FaviconHeadlineParagraphBlockProps {
   faviconHeadlineParagraphBlockArray: FaviconHeadlineParagraphBlockArrayProps[];
   faviconHeadlineParagraphBlockClassName?: string;
+  contentButtonBlockClassName?: string;
 }
 
 export default function FaviconHeadlineParagraphBlock({

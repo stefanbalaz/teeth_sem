@@ -1,4 +1,3 @@
-import React from "react";
 import Headline2 from "./Headline2";
 import Headline3 from "./Headline3";
 import Paragraph from "./Paragraph";

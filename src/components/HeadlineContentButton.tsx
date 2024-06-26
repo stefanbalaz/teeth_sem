@@ -14,7 +14,6 @@ interface HeadlineContentButtonProps {
 
 export default function HeadlineContentButton({
   headlineText,
-  headline3ClassName,
   paragraphText,
   buttonClassName,
   buttonText,
