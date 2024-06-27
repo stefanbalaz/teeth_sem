@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="flex flex-col items-center lg:grid lg:grid-cols-3 gap-4 lg:place-items-center custom-margin-b">
       <Logo logoClassName="justify-self-start h-4 sm:h-6 md:h-8 lg:h-10 xl:h-12 2xl:h-14" />
-      <div className="lg:justify-self-center flex flex-row gap-4 manrope-500">
+      <div className="lg:justify-self-center flex flex-col md:flex-row text-center gap-4 manrope-500">
         <a href="/impressum" className="">
           Impressum
         </a>

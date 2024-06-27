@@ -8,6 +8,7 @@ import ConversionElement from "./components/ConversionElement";
 import Footer from "./components/Footer";
 import ThreeColumnContent from "./components/ThreeColumnContent";
 import PictureBulletSection from "./components/PictureBulletSection";
+import sectionImage from "./assets/woman.png";
 
 function App() {
   return (
@@ -27,8 +28,8 @@ function App() {
       <TwoColumnContent />
       <ConversionElement />
       <ThreeColumnContent />
-      <PictureBulletSection pictureOnRight={true} />
-      <PictureBulletSection pictureOnRight={false} />
+      <PictureBulletSection pictureOnRight={true} pictureSrc={sectionImage} />
+      <PictureBulletSection pictureOnRight={false} pictureSrc={sectionImage} />
       <ConversionElement />
       <Footer />
     </div>

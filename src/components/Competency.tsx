@@ -11,7 +11,7 @@ export default function Competency() {
         "
     >
       <Skills />
-      <Headline1 headline1ClassName="w-3/4 text-center">
+      <Headline1 headline1ClassName="w-3/4 text-center ">
         Wir bieten vielfältige Leistungen
       </Headline1>
       <Paragraph paragraphClassName="w-3/4 text-center mb-0 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0">

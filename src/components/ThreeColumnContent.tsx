@@ -26,9 +26,10 @@ export default function ThreeColumnContent() {
       <Headline2 headline2ClassName="w-3/4 mb-1 sm:mb-2 md:mb-3 lg:mb-4 xl:mb-5">
         Zitate von Jameda und Google
       </Headline2>
-      <Headline1 headline1ClassName="w-3/4 mb-1 sm:mb-2 md:mb-3 lg:mb-4 xl:mb-14">
+      <Headline1 headline1ClassName="!mb-6 !sm:mb-8 !md:mb-10 !lg:mb-14 !xl:mb-16 w-3/4">
         Wie zufrieden sind unsere Kunden mit Zahnersatz
       </Headline1>
+
       <HeadlineParagraphBlock
         headlineParagraphArray={headlineParagraphArray}
         contentButtonBlockClassName="custom-margin-b-half"

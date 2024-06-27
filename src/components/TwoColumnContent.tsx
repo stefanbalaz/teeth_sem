@@ -40,7 +40,7 @@ export default function TwoColumnContent() {
 
   return (
     <div className="custom-margin-b">
-      <Headline1 headline1ClassName="w-3/4 mb-1 sm:mb-2 md:mb-3 lg:mb-4 xl:mb-14">
+      <Headline1 headline1ClassName="w-3/4 !mb-6 !sm:mb-8 !md:mb-10 !lg:mb-14 !xl:mb-16">
         Warum Zahnersatz und warum in unserer Praxis
       </Headline1>
       <ContentButtonBlock
