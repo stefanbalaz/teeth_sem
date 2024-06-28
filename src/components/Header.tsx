@@ -19,7 +19,7 @@ export default function Header() {
   }, []);
 
   return (
-    <nav className="custom-margin-b-min">
+    <nav className="custom-margin-b-third">
       <div className="flex items-center justify-between text-customGreenDark">
         <Logo />
         <div className="hidden lg:block">

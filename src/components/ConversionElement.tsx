@@ -8,7 +8,14 @@ export default function ConversionElement() {
   return (
     <div className="custom-margin-b flex flex-col items-center relative   bg-customGreenExtraBright bg-opacity-60 rounded-md">
       <div className="flex flex-row w-full justify-center items-center">
-        <Headline2 headline2ClassName="w-1/2 text-center mt-1 sm:mt-1 md:mt-1 lg:mt-2 xl:mt-7">
+        <Headline2
+          headline2ClassName="
+          w-1/2 
+          text-center 
+          mt-2 sm:mt-2 md:mt-3 lg:mt-4 xl:mt-7
+          
+          "
+        >
           Wir laden Sie herzlich ein!
         </Headline2>
         <EyeCatcher
