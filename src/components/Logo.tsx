@@ -1,3 +1,4 @@
+/* import { ReactComponent as ReactLogo } from "../assets/Zahnarzt-Zaehnsationell-Zehlendorf-logo.svg"; */
 import ReactLogo from "../assets/Zahnarzt-Zaehnsationell-Zehlendorf-logo.svg?react";
 import { twMerge } from "tailwind-merge";
 

@@ -1,5 +1,7 @@
 import Headline3 from "./Headline3";
 import Favicon from "../assets/Zahnarzt-Zaehnsationell-Zehlendorf-favicon.svg?react";
+
+/* import { ReactComponent as Favicon } from "../assets/Zahnarzt-Zaehnsationell-Zehlendorf-favicon.svg"; */
 import Paragraph from "./Paragraph";
 import { FaviconHeadlineParagraphElementProps } from "../types";
 

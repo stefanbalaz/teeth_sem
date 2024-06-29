@@ -1,18 +1,8 @@
 import sectionImage from "../assets/woman.png";
 import heroBackgroundImagePraxis from "../assets/praxis.png";
 
-interface ConfigType {
-  layout: string;
-  headerProps: any;
-  competencyProps: any;
-  heroProps: any;
-  twoColumnContentProps: any;
-  conversionElementProps: any;
-  footerProps: any;
-  threeColumnContentProps: any;
-  pictureBulletSectionProps1: any;
-  pictureBulletSectionProps2: any;
-}
+import { ConfigType } from "../types";
+
 export const landingPageConfig: Record<string, ConfigType> = {
   default: {
     layout: "Layout1",
