@@ -3,17 +3,17 @@ import { twMerge } from "tailwind-merge";
 interface MoreInfoLinkProps {
   moreInfoText: string;
   moreInfoLink: string;
-  visible: boolean;
+  moreInfoVisible: boolean;
   moreInfoClassName?: string;
 }
 
 export default function MoreInfoLink({
   moreInfoText,
   moreInfoLink,
-  visible,
+  moreInfoVisible,
   moreInfoClassName,
 }: MoreInfoLinkProps) {
-  if (!visible) return null;
+  if (!moreInfoVisible) return null;
 
   const classes = twMerge(
     "custom-margin-b-min text-customGreenDark text-decoration-line: underline",

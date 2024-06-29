@@ -1,57 +1,28 @@
 import ContentButtonBlock from "./ContentButtonBlock";
 import Headline1 from "./Headline1";
 import MoreInfoLink from "./MoreInfoLink";
+import { TwoColumnContentProps } from "../types";
 
-export default function TwoColumnContent() {
-  const contentButtonBlockArray = [
-    {
-      headlineText: "Risiken unversorgter Zahnlücken 1",
-      paragraphText:
-        "1 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.",
-      buttonClassName: "",
-      buttonText: "Mehr lesen 1",
-      buttonLink: "#link1",
-    },
-    {
-      headlineText: "Risiken unversorgter Zahnlücken 2",
-      paragraphText:
-        "2 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.",
-      buttonClassName: "",
-      buttonText: "Mehr lesen 2",
-      buttonLink: "#link2",
-    },
-    {
-      headlineText: "Risiken unversorgter Zahnlücken 3",
-      paragraphText:
-        "3 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.",
-      buttonClassName: "",
-      buttonText: "Mehr lesen 3",
-      buttonLink: "#link3",
-    },
-    {
-      headlineText: "Risiken unversorgter Zahnlücken 4",
-      paragraphText:
-        "4 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.",
-      buttonClassName: "",
-      buttonText: "Mehr lesen 4",
-      buttonLink: "#link4",
-    },
-  ];
-
+export default function TwoColumnContent({
+  contentButtonBlockArray,
+  headline1Text,
+  moreInfoText,
+  moreInfoLink,
+  moreInfoVisible,
+}: TwoColumnContentProps) {
   return (
     <div className="custom-margin-b">
-      <Headline1 headline1ClassName="w-3/4 !mb-6 !sm:mb-8 !md:mb-10 !lg:mb-14 !xl:mb-16">
-        Warum Zahnersatz und warum in unserer Praxis
-      </Headline1>
+      {/* <Headline1 headline1ClassName="w-3/4 !mb-6 !sm:mb-8 !md:mb-10 !lg:mb-14 !xl:mb-16"> */}
+      <Headline1 headline1ClassName="w-3/4">{headline1Text}</Headline1>
       <ContentButtonBlock
         contentButtonBlockArray={contentButtonBlockArray}
         contentButtonBlockClassName=""
       />
       <MoreInfoLink
-        moreInfoText="Mehr zum Zahnersatz in unserer Praxis"
-        moreInfoLink="https://google.com"
+        moreInfoText={moreInfoText}
+        moreInfoLink={moreInfoLink}
         moreInfoClassName="mt-8 mb-0 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0"
-        visible={true}
+        moreInfoVisible={moreInfoVisible}
       />
     </div>
   );

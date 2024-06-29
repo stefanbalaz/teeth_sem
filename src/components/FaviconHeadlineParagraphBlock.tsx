@@ -2,18 +2,15 @@ import FaviconHeadlineParagraphElement from "./FaviconHeadlineParagraphElement";
 import { twMerge } from "tailwind-merge";
 
 interface FaviconHeadlineParagraphBlockArrayProps {
-  headlineText: string;
+  headline3Text: string;
   headline3ClassName?: string;
   paragraphText: string;
-  buttonClassName: string;
-  buttonText?: string;
-  buttonLink?: string;
+  paragraphClassName?: string;
 }
 
 interface FaviconHeadlineParagraphBlockProps {
   faviconHeadlineParagraphBlockArray: FaviconHeadlineParagraphBlockArrayProps[];
   faviconHeadlineParagraphBlockClassName?: string;
-  contentButtonBlockClassName?: string;
 }
 
 export default function FaviconHeadlineParagraphBlock({
@@ -30,9 +27,10 @@ export default function FaviconHeadlineParagraphBlock({
       {faviconHeadlineParagraphBlockArray?.map((block, index) => (
         <FaviconHeadlineParagraphElement
           key={index}
-          headlineText={block.headlineText}
+          headline3Text={block.headline3Text}
           headline3ClassName={block.headline3ClassName}
           paragraphText={block.paragraphText}
+          paragraphClassName={block.paragraphClassName}
         />
       ))}
     </div>

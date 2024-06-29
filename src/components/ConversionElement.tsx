@@ -4,7 +4,25 @@ import Button from "./Button";
 import PhoneNumber from "./PhoneNumber";
 import EyeCatcher from "./EyeCatcher";
 
-export default function ConversionElement() {
+interface ConversionElementProps {
+  headline2Text?: string;
+  paragraphText?: string;
+  buttonLink?: string;
+  buttonText?: string;
+  phoneNumber?: string;
+  eyeCatcherVisible?: boolean;
+  eyeCatcherText?: string;
+}
+
+export default function ConversionElement({
+  headline2Text,
+  paragraphText,
+  buttonLink,
+  buttonText,
+  phoneNumber,
+  eyeCatcherVisible,
+  eyeCatcherText,
+}: ConversionElementProps) {
   return (
     <div className="custom-margin-b flex flex-col items-center relative   bg-customGreenExtraBright bg-opacity-60 rounded-md">
       <div className="flex flex-row w-full justify-center items-center">
@@ -13,25 +31,26 @@ export default function ConversionElement() {
           w-1/2 
           text-center 
           mt-2 sm:mt-2 md:mt-3 lg:mt-4 xl:mt-7
-          
           "
         >
-          Wir laden Sie herzlich ein!
+          {headline2Text}
         </Headline2>
         <EyeCatcher
-          eyeCatcherClassName="absolute right-0 top-0 mb-2 ml-2"
-          visible={true}
+          eyeCatcherClassName="absolute right-0 -top-2 mb-2 ml-2 rotate-6"
+          eyeCatcherVisible={eyeCatcherVisible}
         >
-          Call me now!
+          {eyeCatcherText}
         </EyeCatcher>
       </div>
       <Paragraph paragraphClassName="w-3/4 text-center">
-        Wir laden Sie herzlich ein, um eine Planung für Ihren Zahnersatz zu
-        erstellen. Gerne beantworten wir alle Ihre Fragen!
+        {paragraphText}
       </Paragraph>
       <div className="flex flex-row items-center gap-4 custom-margin-b-third">
-        <Button buttonClassName="mb-0 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0">
-          Termin online vereinbaren
+        <Button
+          buttonClassName="mb-0 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0"
+          buttonLink={buttonLink}
+        >
+          {buttonText}
         </Button>
         <PhoneNumber
           phoneNumberClassName="
@@ -39,7 +58,7 @@ export default function ConversionElement() {
             manrope-700
             "
         >
-          030 123 4567
+          {phoneNumber}
         </PhoneNumber>
       </div>
     </div>

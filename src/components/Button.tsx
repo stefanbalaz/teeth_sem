@@ -18,7 +18,7 @@ export default function Button({
   );
 
   return (
-    <a href={buttonLink} className="inline-block">
+    <a href={buttonLink} className="inline-block" target="_blank">
       <button className={classes}>{children}</button>
     </a>
   );

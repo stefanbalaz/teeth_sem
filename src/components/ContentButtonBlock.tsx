@@ -1,19 +1,6 @@
 import HeadlineContentButton from "./HeadlineContentButton";
 import { twMerge } from "tailwind-merge";
-
-interface ContentButtonBlockArrayProps {
-  headlineText: string;
-  headline3ClassName?: string;
-  paragraphText: string;
-  buttonClassName: string;
-  buttonText?: string;
-  buttonLink?: string;
-}
-
-interface ContentButtonBlockProps {
-  contentButtonBlockArray: ContentButtonBlockArrayProps[];
-  contentButtonBlockClassName?: string;
-}
+import { ContentButtonBlockProps } from "../types";
 
 export default function ContentButtonBlock({
   contentButtonBlockArray,

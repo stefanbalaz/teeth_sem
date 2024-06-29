@@ -1,39 +1,33 @@
-/// <reference types="vite-plugin-svgr/client" />
-import "./App.css";
-import Header from "./components/Header";
-import Competency from "./components/Competency";
-import Hero from "./components/Hero";
-import TwoColumnContent from "./components/TwoColumnContent";
-import ConversionElement from "./components/ConversionElement";
-import Footer from "./components/Footer";
-import ThreeColumnContent from "./components/ThreeColumnContent";
-import PictureBulletSection from "./components/PictureBulletSection";
-import sectionImage from "./assets/woman.png";
+import { useParams } from "react-router-dom";
+import { landingPageConfig } from "./config/componentConfig";
+import * as layouts from "./layouts";
+import { ConfigType } from "./types";
 
-function App() {
-  return (
-    <div
-      className="
-        mx-2 sm:mx-4 md:mx-6 lg:mx-8 xl:mx-10
-        mt-2 sm:mt-2 md:mt-3 lg:mt-4 xl:mt-7
-        mb-2 sm:mb-4 md:mb-6 lg:mb-8 xl:mb-10
-        text-customBlack
-        manrope-300
-        text-base sm:text-lg 
-        "
-    >
-      <Header />
-      <Hero />
-      <Competency />
-      <TwoColumnContent />
-      <ConversionElement />
-      <ThreeColumnContent />
-      <PictureBulletSection pictureOnRight={true} pictureSrc={sectionImage} />
-      <PictureBulletSection pictureOnRight={false} pictureSrc={sectionImage} />
-      <ConversionElement />
-      <Footer />
-    </div>
-  );
+function DynamicComponentRouter() {
+  const { landingPageParameter } = useParams<{
+    landingPageParameter: string;
+  }>();
+
+  // Provide a default value if landingPageParameter is undefined
+  const parameter = landingPageParameter || "default";
+  const configToUse: ConfigType =
+    landingPageConfig[parameter] || landingPageConfig.default;
+
+  // Ensure configToUse is always defined
+  if (!configToUse) {
+    return <div>Configuration not found</div>;
+  }
+
+  const layoutName = configToUse.layout || "Layout1";
+  const LayoutComponent = (
+    layouts as { [key: string]: React.ComponentType<{ config: ConfigType }> }
+  )[layoutName];
+
+  if (!LayoutComponent) {
+    return <div>Layout not found</div>;
+  }
+
+  return <LayoutComponent config={configToUse} />;
 }
 
-export default App;
+export default DynamicComponentRouter;
