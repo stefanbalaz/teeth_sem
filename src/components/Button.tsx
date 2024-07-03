@@ -1,10 +1,5 @@
 import { twMerge } from "tailwind-merge";
-
-interface ButtonProps {
-  children: React.ReactNode;
-  buttonLink?: string;
-  buttonClassName?: string;
-}
+import { ButtonProps } from "../types";
 
 export default function Button({
   children,

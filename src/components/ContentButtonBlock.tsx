@@ -13,10 +13,10 @@ export default function ContentButtonBlock({
 
   return (
     <div className={classes}>
-      {contentButtonBlockArray.map((block, index) => (
+      {contentButtonBlockArray?.map((block, index) => (
         <HeadlineContentButton
           key={index}
-          headlineText={block.headlineText}
+          headline3Text={block.headline3Text}
           headline3ClassName={block.headline3ClassName}
           paragraphText={block.paragraphText}
           buttonClassName="mb-0 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0"

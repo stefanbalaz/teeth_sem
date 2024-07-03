@@ -1,9 +1,5 @@
 import { twMerge } from "tailwind-merge";
-
-interface Headline2Props {
-  children: React.ReactNode;
-  headline2ClassName?: string;
-}
+import { Headline2Props } from "../types";
 
 export default function Headline2({
   children,

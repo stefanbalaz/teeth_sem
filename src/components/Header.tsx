@@ -3,9 +3,9 @@ import { Collapse, IconButton } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Navigation from "../components/Navigation";
 import Logo from "./Logo";
-import { NavigationProps } from "../components/Navigation";
+import { HeaderProps } from "../types";
 
-export default function Header({ navigationList = [] }: NavigationProps) {
+export default function Header({ navigationList = [] }: HeaderProps) {
   const [openNav, setOpenNav] = useState(false);
 
   const handleWindowResize = () => {
@@ -23,7 +23,9 @@ export default function Header({ navigationList = [] }: NavigationProps) {
   return (
     <nav className="custom-margin-b-third">
       <div className="flex items-center justify-between text-customGreenDark">
-        <Logo />
+        <a href="/">
+          <Logo />
+        </a>
         <div className="hidden lg:block">
           {navigationList.length > 0 ? (
             <Navigation navigationList={navigationList} />

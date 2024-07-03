@@ -1,11 +1,5 @@
 import { twMerge } from "tailwind-merge";
-
-interface MoreInfoLinkProps {
-  moreInfoText: string;
-  moreInfoLink: string;
-  moreInfoVisible: boolean;
-  moreInfoClassName?: string;
-}
+import { MoreInfoLinkProps } from "../types";
 
 export default function MoreInfoLink({
   moreInfoText,

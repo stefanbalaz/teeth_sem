@@ -1,11 +1,4 @@
-interface NavigationItem {
-  label: string;
-  url: string;
-}
-
-export interface NavigationProps {
-  navigationList: NavigationItem[];
-}
+import { NavigationProps } from "../types";
 
 export default function Navigation({ navigationList }: NavigationProps) {
   return (
@@ -17,8 +10,8 @@ export default function Navigation({ navigationList }: NavigationProps) {
         lg:mb-0 lg:mt-0
       "
     >
-      {navigationList?.map((item, index) => (
-        <li key={index}>
+      {navigationList?.map((item) => (
+        <li key={item.id}>
           <a
             href={item.url}
             target="_blank"

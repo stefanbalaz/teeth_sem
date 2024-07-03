@@ -4,18 +4,7 @@ import Paragraph from "./Paragraph";
 import Button from "./Button";
 import PhoneNumber from "./PhoneNumber";
 import EyeCatcher from "./EyeCatcher";
-
-interface HeroProps {
-  backgroundImage: string;
-  eyeCatcherVisible: boolean;
-  eyeCatcherText?: string;
-  headline2Text?: string;
-  headline3Text?: string;
-  paragraphText?: string;
-  buttonLink?: string;
-  buttonText?: string;
-  phoneNumber?: string;
-}
+import { HeroProps } from "../types";
 
 export default function Hero({
   backgroundImage,

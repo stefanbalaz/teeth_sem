@@ -1,9 +1,5 @@
 import { twMerge } from "tailwind-merge";
-
-interface ParagraphProps {
-  children: React.ReactNode;
-  paragraphClassName?: string;
-}
+import { ParagraphProps } from "../types";
 
 export default function Paragraph({
   children,

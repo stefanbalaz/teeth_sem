@@ -1,13 +1,6 @@
 import Logo from "./Logo";
+import { FooterProps } from "../types";
 
-interface FooterProps {
-  link1Text?: string;
-  link2Text?: string;
-  link1Url?: string;
-  link2Url?: string;
-  eMail?: string;
-  provider?: string;
-}
 export default function Footer({
   link1Text,
   link2Text,

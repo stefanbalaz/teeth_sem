@@ -1,16 +1,5 @@
 import FaviconHeadlineParagraphBlock from "./FaviconHeadlineParagraphBlock";
-
-interface FaviconHeadlineParagraphBlockArrayProps {
-  headline3Text: string;
-  paragraphText: string;
-}
-
-interface PictureBulletSectionProps {
-  pictureOnRight: boolean;
-  pictureSrc: string;
-  pictureAlt: string;
-  faviconHeadlineParagraphBlockArray: FaviconHeadlineParagraphBlockArrayProps[];
-}
+import { PictureBulletSectionProps } from "../types";
 
 export default function PictureBulletSection({
   pictureOnRight,

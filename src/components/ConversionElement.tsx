@@ -3,16 +3,7 @@ import Paragraph from "./Paragraph";
 import Button from "./Button";
 import PhoneNumber from "./PhoneNumber";
 import EyeCatcher from "./EyeCatcher";
-
-interface ConversionElementProps {
-  headline2Text?: string;
-  paragraphText?: string;
-  buttonLink?: string;
-  buttonText?: string;
-  phoneNumber?: string;
-  eyeCatcherVisible?: boolean;
-  eyeCatcherText?: string;
-}
+import { ConversionElementProps } from "../types";
 
 export default function ConversionElement({
   headline2Text,
@@ -24,7 +15,7 @@ export default function ConversionElement({
   eyeCatcherText,
 }: ConversionElementProps) {
   return (
-    <div className="custom-margin-b flex flex-col items-center relative   bg-customGreenExtraBright bg-opacity-60 rounded-md">
+    <div className="custom-margin-b flex flex-col items-center relative bg-customGreenExtraBright bg-opacity-60 rounded-md">
       <div className="flex flex-row w-full justify-center items-center">
         <Headline2
           headline2ClassName="

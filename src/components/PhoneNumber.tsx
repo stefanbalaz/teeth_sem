@@ -1,9 +1,5 @@
 import { twMerge } from "tailwind-merge";
-
-interface PhoneNumberProps {
-  children: React.ReactNode;
-  phoneNumberClassName?: string;
-}
+import { PhoneNumberProps } from "../types";
 
 export default function PhoneNumber({
   children,

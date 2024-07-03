@@ -1,10 +1,5 @@
 import { twMerge } from "tailwind-merge";
-
-interface EyeCatcherProps {
-  children: React.ReactNode;
-  eyeCatcherClassName?: string;
-  eyeCatcherVisible?: boolean;
-}
+import { EyeCatcherProps } from "../types";
 
 export default function EyeCatcher({
   children,

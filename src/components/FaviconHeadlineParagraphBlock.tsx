@@ -1,17 +1,6 @@
 import FaviconHeadlineParagraphElement from "./FaviconHeadlineParagraphElement";
 import { twMerge } from "tailwind-merge";
-
-interface FaviconHeadlineParagraphBlockArrayProps {
-  headline3Text: string;
-  headline3ClassName?: string;
-  paragraphText: string;
-  paragraphClassName?: string;
-}
-
-interface FaviconHeadlineParagraphBlockProps {
-  faviconHeadlineParagraphBlockArray: FaviconHeadlineParagraphBlockArrayProps[];
-  faviconHeadlineParagraphBlockClassName?: string;
-}
+import { FaviconHeadlineParagraphBlockProps } from "../types";
 
 export default function FaviconHeadlineParagraphBlock({
   faviconHeadlineParagraphBlockArray,
