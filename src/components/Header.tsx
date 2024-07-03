@@ -7,6 +7,7 @@ import { HeaderProps } from "../types";
 
 export default function Header({ navigationList = [] }: HeaderProps) {
   const [openNav, setOpenNav] = useState(false);
+  const [storedParameter, setStoredParameter] = useState<string | null>(null);
 
   const handleWindowResize = () => {
     if (window.innerWidth >= 960) setOpenNav(false);
@@ -20,10 +21,15 @@ export default function Header({ navigationList = [] }: HeaderProps) {
     };
   }, []);
 
+  useEffect(() => {
+    const parameter = localStorage.getItem("landingPageParameter");
+    setStoredParameter(parameter);
+  }, []);
+
   return (
     <nav className="custom-margin-b-third">
       <div className="flex items-center justify-between text-customGreenDark">
-        <a href="/">
+        <a href={`/${storedParameter || ""}`}>
           <Logo />
         </a>
         <div className="hidden lg:block">

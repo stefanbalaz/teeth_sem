@@ -100,6 +100,19 @@ function DynamicComponentRouter() {
     return () => clearTimeout(timeout);
   }, []);
 
+  console.log("fetchedConfig", fetchedConfig);
+
+  useEffect(() => {
+    if (fetchedConfig && typeof fetchedConfig === 'object') {
+      const firstKey = Object.keys(fetchedConfig)[0];
+      // Store the first key of fetchedConfig in local storage when it changes
+      if (firstKey) {
+        localStorage.setItem("landingPageParameter", firstKey);
+      }
+    }
+  }, [fetchedConfig]);
+  
+
   if (loading) {
     return (
       <div
