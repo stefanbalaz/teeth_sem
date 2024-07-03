@@ -9,15 +9,23 @@ export default function ThreeColumnContent({
   headlineParagraphArray,
 }: ThreeColumnContentProps) {
   return (
-    <div className="custom-margin-b">
-      <Headline2 headline2ClassName="w-3/4 mb-1 sm:mb-2 md:mb-3 lg:mb-4 xl:mb-5">
-        {headline2Text}
-      </Headline2>
-      <Headline1 headline1ClassName=" w-3/4">{headline1Text}</Headline1>
-      <HeadlineParagraphBlock
-        headlineParagraphArray={headlineParagraphArray}
-        contentButtonBlockClassName="custom-margin-b-half"
-      />
-    </div>
+    <>
+      {headlineParagraphArray && (
+        <div className="custom-margin-b">
+          {headline2Text && (
+            <Headline2 headline2ClassName="w-3/4 mb-1 sm:mb-2 md:mb-3 lg:mb-4 xl:mb-5">
+              {headline2Text}
+            </Headline2>
+          )}
+          {headline1Text && (
+            <Headline1 headline1ClassName=" w-3/4">{headline1Text}</Headline1>
+          )}
+          <HeadlineParagraphBlock
+            headlineParagraphArray={headlineParagraphArray}
+            contentButtonBlockClassName=""
+          />
+        </div>
+      )}
+    </>
   );
 }

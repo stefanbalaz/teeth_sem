@@ -24,7 +24,7 @@ export default function Header({ navigationList = [] }: HeaderProps) {
   useEffect(() => {
     const parameter = localStorage.getItem("landingPageParameter");
     setStoredParameter(parameter);
-  }, []);
+  });
 
   return (
     <nav className="custom-margin-b-third">

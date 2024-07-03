@@ -20,9 +20,11 @@ export default function HeadlineContentButton({
         </Headline3>
       </div>
       <Paragraph paragraphClassName="">{paragraphText}</Paragraph>
-      <Button buttonClassName={buttonClassName} buttonLink={buttonLink}>
-        {buttonText}
-      </Button>
+      {buttonText && (
+        <Button buttonClassName={buttonClassName} buttonLink={buttonLink}>
+          {buttonText}
+        </Button>
+      )}
     </div>
   );
 }

@@ -1,5 +1,6 @@
-import sectionImage from "../assets/woman.png";
-import heroBackgroundImagePraxis from "../assets/praxis.png";
+import dentalCheckup from "../assets/dental-checkup.jpg";
+import youngWomanFingers from "../assets/young-woman-fingers.jpg";
+import heroBackgroundImagePraxis from "../assets/dental-practice.png";
 
 import { ConfigType } from "../types";
 
@@ -144,7 +145,7 @@ export const landingPageConfig: Record<string, ConfigType> = {
     },
     pictureBulletSectionProps1: {
       pictureOnRight: true,
-      pictureSrc: sectionImage,
+      pictureSrc: youngWomanFingers,
       pictureAlt: "Woman with teeth",
       faviconHeadlineParagraphBlockArray: [
         {
@@ -172,7 +173,7 @@ export const landingPageConfig: Record<string, ConfigType> = {
     },
     pictureBulletSectionProps2: {
       pictureOnRight: false,
-      pictureSrc: sectionImage,
+      pictureSrc: dentalCheckup,
       pictureAlt: "Woman with teeth",
       faviconHeadlineParagraphBlockArray: [
         {

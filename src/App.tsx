@@ -5,6 +5,7 @@ import { ContentfulData, ConfigType } from "./types";
 import useContentful from "./hooks/useContentful";
 import React, { useEffect, useState } from "react";
 import Headline1 from "./components/Headline1";
+import Favicon from "./assets/Zahnarzt-Zaehnsationell-Zehlendorf-favicon.svg?react";
 
 function DynamicComponentRouter() {
   const [data, setData] = useState<ContentfulData[]>([]);
@@ -117,6 +118,7 @@ function DynamicComponentRouter() {
   if (loading) {
     return (
       <div
+        className="flex flex-col items-center justify-center gap-8"
         style={{
           display: "flex",
           alignItems: "center",
@@ -124,6 +126,7 @@ function DynamicComponentRouter() {
           height: "100vh",
         }}
       >
+        <Favicon className="w-12 h-12 lg:w-16 lg:h-16 object-contain" />
         <Headline1 headline1ClassName="flex align-center justify-center">
           Loading...
         </Headline1>

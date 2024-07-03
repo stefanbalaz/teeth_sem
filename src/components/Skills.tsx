@@ -21,22 +21,41 @@ export default function Skills({ skills }: SkillsProps) {
           "
           key={index}
         >
-          <a
-            href={skill.link}
-            className="
-              block
-              h-full
-              w-full
-              p-2 md:p-3 2xl:p-4
-              rounded-md
-              text-center
-              bg-customGreenExtraBright
-              hover:bg-opacity-60
-            "
-            target="_blank"
-          >
-            {skill.label}
-          </a>
+          {skill.label ? (
+            skill.link ? (
+              <a
+                href={skill.link}
+                className="
+        block
+        h-full
+        w-full
+        p-2 md:p-3 2xl:p-4
+        rounded-md
+        text-center
+        bg-customGreenExtraBright
+        hover:bg-opacity-60
+      "
+                target="_blank"
+              >
+                {skill.label}
+              </a>
+            ) : (
+              <div
+                className="
+        block
+        h-full
+        w-full
+        p-2 md:p-3 2xl:p-4
+        rounded-md
+        text-center
+        bg-customGreenExtraBright
+        hover:bg-opacity-60
+      "
+              >
+                {skill.label}
+              </div>
+            )
+          ) : null}
         </li>
       ))}
     </ul>

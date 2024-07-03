@@ -20,6 +20,7 @@ export default function Hero({
   return (
     <div
       className="
+        rounded-md
         relative
         bg-cover bg-center
         p-5
@@ -38,7 +39,7 @@ export default function Hero({
         {headline2Text && <Headline2>{headline2Text}</Headline2>}
         {paragraphText && <Paragraph>{paragraphText}</Paragraph>}
         <div className="flex flex-row items-center gap-4">
-          {buttonText && buttonLink && (
+          {buttonText && (
             <Button
               buttonClassName="mb-0 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0"
               buttonLink={buttonLink}
