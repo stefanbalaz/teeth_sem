@@ -34,24 +34,28 @@ export default function Hero({
         >
           {eyeCatcherText}
         </EyeCatcher>
-        <Headline3>{headline3Text}</Headline3>
-        <Headline2>{headline2Text}</Headline2>
-        <Paragraph>{paragraphText}</Paragraph>
+        {headline3Text && <Headline3>{headline3Text}</Headline3>}
+        {headline2Text && <Headline2>{headline2Text}</Headline2>}
+        {paragraphText && <Paragraph>{paragraphText}</Paragraph>}
         <div className="flex flex-row items-center gap-4">
-          <Button
-            buttonClassName="mb-0 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0"
-            buttonLink={buttonLink}
-          >
-            {buttonText}
-          </Button>
-          <PhoneNumber
-            phoneNumberClassName="
+          {buttonText && buttonLink && (
+            <Button
+              buttonClassName="mb-0 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0"
+              buttonLink={buttonLink}
+            >
+              {buttonText}
+            </Button>
+          )}
+          {phoneNumber && (
+            <PhoneNumber
+              phoneNumberClassName="
             text-customGreenDark
             manrope-700
             "
-          >
-            {phoneNumber}
-          </PhoneNumber>
+            >
+              {phoneNumber}
+            </PhoneNumber>
+          )}
         </div>
       </div>
     </div>
