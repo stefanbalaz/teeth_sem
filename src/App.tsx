@@ -103,23 +103,6 @@ function DynamicComponentRouter() {
 
   console.log("fetchedConfig", fetchedConfig);
 
-  /*   useEffect(() => {
-    const firstKey =
-      fetchedConfig && typeof fetchedConfig === "object"
-        ? Object.keys(fetchedConfig)[0]
-        : "";
-    if (fetchedConfig && typeof fetchedConfig === "object") {
-      // Store the first key of fetchedConfig in local storage when it changes
-      if (firstKey) {
-        localStorage.setItem("landingPageParameter", firstKey);
-      }
-    } else if (landingPageParameter === "impressum") {
-      localStorage.setItem("landingPageParameter", firstKey);
-    } else {
-      localStorage.setItem("landingPageParameter", "");
-    }
-  }); */
-
   useEffect(() => {
     // Check if local storage already has a value for landingPageParameter
     const currentStoredValue = localStorage.getItem("landingPageParameter");
@@ -149,7 +132,7 @@ function DynamicComponentRouter() {
       >
         <Favicon className="w-12 h-12 lg:w-16 lg:h-16 object-contain" />
         <Headline1 headline1ClassName="flex align-center justify-center">
-          Loading...
+          Laden...
         </Headline1>
       </div>
     );
