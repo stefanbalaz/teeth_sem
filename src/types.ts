@@ -150,7 +150,7 @@ export interface ConfigType {
   threeColumnContentProps?: ThreeColumnContentProps;
   pictureBulletSectionProps1?: PictureBulletSectionProps;
   pictureBulletSectionProps2?: PictureBulletSectionProps;
-  legalProps?: LegalProps;
+  legalContentProps?: LegalContentProps;
   footerProps?: FooterProps;
 }
 
@@ -167,7 +167,7 @@ export interface ContentfulData {
   }; */
 }
 
-export interface LegalProps {}
+export interface LegalContentProps {}
 
 export interface FaviconHeadlineParagraphElementProps {
   headline3Text?: string;
@@ -230,11 +230,68 @@ export interface MoreInfoLinkProps {
 }
 
 export interface ParagraphProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   paragraphClassName?: string;
 }
 
 export interface PhoneNumberProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   phoneNumberClassName?: string;
+}
+
+export interface LegalProps {
+  layout?: string;
+  headerProps?: HeaderProps;
+  legalContentProps?: LegalContentProps;
+}
+
+export interface LegalContentProps {
+  impressum?: ImpressumContent;
+  dataPrivacy?: DataPrivacyContent;
+}
+
+export interface ImpressumContent {
+  intro?: {
+    headline1Text?: string;
+  };
+  sections?: ImpressumSection[];
+}
+
+export interface ImpressumSection {
+  headline3Text?: string;
+  paragraphText?: string;
+}
+
+export interface DataPrivacyContent {
+  intro?: {
+    headline1Text?: string;
+    paragraphText?: string;
+  };
+  sections?: DataPrivacySection[];
+}
+
+export interface DataPrivacySection {
+  headline1Text?: string;
+  content?: DataPrivacyContent[];
+}
+
+export interface DataPrivacyContent {
+  headline2Text?: string;
+  paragraphText?: string | string[];
+  subContent?: DataPrivacySubContent[];
+}
+
+export interface DataPrivacyIntro {
+  headline1Text?: string;
+  paragraphText?: string;
+}
+
+export interface DataPrivacySubContent {
+  headline3Text?: string;
+  paragraphText?: string;
+}
+
+export interface DataPrivacy {
+  intro: DataPrivacyIntro;
+  sections: DataPrivacySection[];
 }

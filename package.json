@@ -17,6 +17,7 @@
     "contentful": "^10.12.4",
     "dotenv": "^16.4.5",
     "react": "^18.2.0",
+    "react-cookie-consent": "^9.0.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.24.0",
     "tailwind-merge": "^2.3.0",

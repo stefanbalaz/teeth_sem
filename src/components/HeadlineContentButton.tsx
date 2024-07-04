@@ -20,7 +20,7 @@ export default function HeadlineContentButton({
         </Headline3>
       </div>
       <Paragraph paragraphClassName="">{paragraphText}</Paragraph>
-      {buttonText && (
+      {buttonLink && (
         <Button buttonClassName={buttonClassName} buttonLink={buttonLink}>
           {buttonText}
         </Button>

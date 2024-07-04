@@ -6,7 +6,7 @@ import ConversionElement from "./components/ConversionElement";
 import Footer from "./components/Footer";
 import ThreeColumnContent from "./components/ThreeColumnContent";
 import PictureBulletSection from "./components/PictureBulletSection";
-import Legal from "./components/Legal";
+import LegalContent from "./components/LegalContent";
 import { LayoutProps } from "./types";
 
 export const Layout1 = ({ config }: LayoutProps) => (
@@ -18,8 +18,8 @@ export const Layout1 = ({ config }: LayoutProps) => (
     <ConversionElement {...config?.conversionElementProps} />
     <ThreeColumnContent {...config?.threeColumnContentProps} />
     <PictureBulletSection {...config?.pictureBulletSectionProps1} />
-    <PictureBulletSection {...config?.pictureBulletSectionProps2} />
     <ConversionElement {...config?.conversionElementProps} />
+    <PictureBulletSection {...config?.pictureBulletSectionProps2} />
     <Footer {...config?.footerProps} />
   </>
 );
@@ -39,10 +39,10 @@ export const Layout2 = ({ config }: LayoutProps) => (
   </>
 );
 
-export const Impressum = ({ config }: LayoutProps) => (
+export const Legal = ({ config }: LayoutProps) => (
   <>
     <Header {...config?.headerProps} />
-    <Legal {...config?.legalProps} />
+    <LegalContent {...config?.legalContentProps} />
     <Footer {...config?.footerProps} />
   </>
 );

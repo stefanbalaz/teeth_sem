@@ -104,20 +104,35 @@ function DynamicComponentRouter() {
   console.log("fetchedConfig", fetchedConfig);
 
   useEffect(() => {
-    // Check if local storage already has a value for landingPageParameter
     const currentStoredValue = localStorage.getItem("landingPageParameter");
+
+    if (
+      landingPageParameter === "impressum" ||
+      landingPageParameterFormatted === "data-privacy"
+    ) {
+      // Do not overwrite the value in local storage when the URL is /impressum
+      return;
+    }
 
     if (
       !currentStoredValue || // If no value is stored
       (fetchedConfig && typeof fetchedConfig === "object")
     ) {
-      // Update localStorage only if fetchedConfig is valid and not already stored
+      // Update localStorage based on the fetchedConfig if available
       const firstKey = fetchedConfig ? Object.keys(fetchedConfig)[0] : "";
       if (firstKey) {
         localStorage.setItem("landingPageParameter", firstKey);
+      } else {
+        localStorage.setItem(
+          "landingPageParameter",
+          landingPageParameter || ""
+        );
       }
+    } else if (!landingPageParameter) {
+      // If the URL parameter is not present, set localStorage to null
+      localStorage.setItem("landingPageParameter", "");
     }
-  }, [fetchedConfig]);
+  }, [fetchedConfig, landingPageParameter]);
 
   if (loading) {
     return (
@@ -140,9 +155,14 @@ function DynamicComponentRouter() {
 
   let configToUse: ConfigType;
 
-  if (landingPageParameterFormatted === "impressum") {
+  if (
+    landingPageParameterFormatted === "data-privacy" ||
+    landingPageParameterFormatted === "impressum"
+  ) {
+    configToUse = landingPageConfig.legal as ConfigType;
+  } /* else if (landingPageParameterFormatted === "impressum") {
     configToUse = landingPageConfig.impressum as ConfigType;
-  } else if (
+  } */ else if (
     fetchedConfig &&
     landingPageParameterFormatted &&
     fetchedConfig[landingPageParameterFormatted as keyof ConfigType]
