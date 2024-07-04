@@ -103,17 +103,38 @@ function DynamicComponentRouter() {
 
   console.log("fetchedConfig", fetchedConfig);
 
-  useEffect(() => {
+  /*   useEffect(() => {
+    const firstKey =
+      fetchedConfig && typeof fetchedConfig === "object"
+        ? Object.keys(fetchedConfig)[0]
+        : "";
     if (fetchedConfig && typeof fetchedConfig === "object") {
-      const firstKey = Object.keys(fetchedConfig)[0];
       // Store the first key of fetchedConfig in local storage when it changes
       if (firstKey) {
         localStorage.setItem("landingPageParameter", firstKey);
       }
+    } else if (landingPageParameter === "impressum") {
+      localStorage.setItem("landingPageParameter", firstKey);
     } else {
       localStorage.setItem("landingPageParameter", "");
     }
-  });
+  }); */
+
+  useEffect(() => {
+    // Check if local storage already has a value for landingPageParameter
+    const currentStoredValue = localStorage.getItem("landingPageParameter");
+
+    if (
+      !currentStoredValue || // If no value is stored
+      (fetchedConfig && typeof fetchedConfig === "object")
+    ) {
+      // Update localStorage only if fetchedConfig is valid and not already stored
+      const firstKey = fetchedConfig ? Object.keys(fetchedConfig)[0] : "";
+      if (firstKey) {
+        localStorage.setItem("landingPageParameter", firstKey);
+      }
+    }
+  }, [fetchedConfig]);
 
   if (loading) {
     return (
