@@ -7,7 +7,7 @@ export default function Cookie() {
       buttonText="Alle bestätigen"
       cookieName="zaehnsationellCookieConsent"
       style={{ background: "#dbebe9" }}
-      contentStyle={{ color: "2a5854", fontSize: "1.5rem" }}
+      contentStyle={{ color: "#2a5854", fontSize: "1.5rem" }}
       buttonStyle={{
         color: "#FFFFFF",
         fontSize: "1.5rem",
