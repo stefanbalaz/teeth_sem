@@ -162,7 +162,7 @@ export const landingPageConfig: Record<string, ConfigType> = {
             "Sehr einfühlsam, nimmt sich genug Zeit bis das Ergebnis perfekt ist. Eine sehr gemütliche Praxis mit professionellem Team und Top-Organisation. Keine Massenabfertigung.",
         },
         {
-          headline3Text: "Jan aud Cottbus",
+          headline3Text: "Jan aus Cottbus",
           paragraphText:
             "Die kurzen Wartezeiten sind lobenswert genau wie das freundliche Team und die zuvorkommenden Zahnärzte. Sie nehmen sich Zeit für die Behandlung so wie für die Aufklärung. Nur zu empfehlen.",
         },
