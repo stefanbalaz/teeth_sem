@@ -101,7 +101,7 @@ export const landingPageConfig: Record<string, ConfigType> = {
     twoColumnContentProps: {
       contentButtonBlockArray: [
         {
-          headline3Text: "Natürliches Zahnersatz",
+          headline3Text: "Natürlicher Zahnersatz",
           paragraphText:
             "Unser Zahnersatz bietet ein natürliches Lächeln und hohe Funktionalität für Ihre Zähne. Wir bieten maßgeschneiderte Lösungen, die Ihren individuellen Bedürfnissen entsprechen.",
           buttonClassName: "",
