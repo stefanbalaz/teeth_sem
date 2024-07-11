@@ -6,6 +6,8 @@ import useContentful from "./hooks/useContentful";
 import React, { useEffect, useState } from "react";
 import Headline1 from "./components/Headline1";
 import Favicon from "./assets/Zahnarzt-Zaehnsationell-Zehlendorf-favicon.svg?react";
+import ReactGA from "react-ga4";
+ReactGA.initialize("G-5YFNQD4C3F");
 
 function DynamicComponentRouter() {
   const [data, setData] = useState<ContentfulData[]>([]);
