@@ -7,7 +7,7 @@ import React, { useEffect, useState } from "react";
 import Headline1 from "./components/Headline1";
 import Favicon from "./assets/Zahnarzt-Zaehnsationell-Zehlendorf-favicon.svg?react";
 import ReactGA from "react-ga4";
-ReactGA.initialize("G-5YFNQD4C3F");
+//ReactGA.initialize("G-5YFNQD4C3F");
 
 function DynamicComponentRouter() {
   const [data, setData] = useState<ContentfulData[]>([]);
@@ -18,6 +18,20 @@ function DynamicComponentRouter() {
     landingPageParameter: string;
   }>();
   const landingPageParameterFormatted = landingPageParameter?.toLowerCase();
+
+  const landingPageParameterString =
+    landingPageParameter?.toString() ?? "Default version";
+
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: landingPageParameterString,
+      title: landingPageParameterString,
+    });
+    console.log("GApush", landingPageParameterString);
+  }, [landingPageParameterString]);
+
+  console.log("landingPageParameterString", landingPageParameterString);
 
   useEffect(() => {
     const fetchData = async () => {
