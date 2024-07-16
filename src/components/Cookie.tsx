@@ -97,8 +97,8 @@ export default function Cookie() {
             },
             preferencesModal: {
               title: "Datenschutz-Präferenz",
-              acceptAllBtn: "Ich akzeptiere alle",
-              acceptNecessaryBtn: "Ich lehne alle ab",
+              acceptAllBtn: "Ich akzeptiere alle Cookies",
+              acceptNecessaryBtn: "Nur essenzielle Cookies akzeptieren",
               savePreferencesBtn: "Ich akzeptiere die aktuelle Auswahl",
               closeIconLabel: "Close modal",
               serviceCounterLabel: "Service|Services",
