@@ -3,6 +3,10 @@ import "vanilla-cookieconsent/dist/cookieconsent.css";
 import * as CookieConsent from "vanilla-cookieconsent";
 import ReactGA from "react-ga4";
 
+export const showConsentModal = () => {
+  CookieConsent.show(true);
+};
+
 export default function Cookie() {
   useEffect(() => {
     CookieConsent.run({

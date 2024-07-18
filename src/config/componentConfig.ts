@@ -16,13 +16,8 @@ export const landingPageConfig: Record<string, ConfigType> = {
         },
         {
           id: "2",
-          label: "Medien",
-          url: "https://www.zaehnsationell.de/medien/",
-        },
-        {
-          id: "3",
-          label: "Kontakt",
-          url: "https://www.zaehnsationell.de/kontakt-zahnarzt-zehlendorf/",
+          label: "Unsere Praxis",
+          url: "https://www.zaehnsationell.de/",
         },
       ],
     },
@@ -251,13 +246,8 @@ export const landingPageConfig: Record<string, ConfigType> = {
         },
         {
           id: "2",
-          label: "Medien",
-          url: "https://www.zaehnsationell.de/medien/",
-        },
-        {
-          id: "3",
-          label: "Kontakt",
-          url: "https://www.zaehnsationell.de/kontakt-zahnarzt-zehlendorf/",
+          label: "Unsere Praxis",
+          url: "https://www.zaehnsationell.de/",
         },
       ],
     },
