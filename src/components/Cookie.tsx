@@ -133,7 +133,7 @@ export default function Cookie() {
                   },
                 },
                 {
-                  title: "Funtionell",
+                  title: "Analytisch",
                   description:
                     "Diese Cookies sammeln Informationen darüber, wie Sie unsere Website nutzen. Alle Daten werden anonymisiert und können nicht verwendet werden, um Sie zu identifizieren.",
                   linkedCategory: "analytics",

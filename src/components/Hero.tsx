@@ -20,15 +20,19 @@ export default function Hero({
   return (
     <div
       className="
+        flex
+        justify-center
+        items-center
         rounded-md
         relative
         bg-cover bg-center
         p-5
         custom-margin-b-third
+        2xl:min-h-[600px] 
         "
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="relative bg-white bg-opacity-95 rounded-md w-full md:w-1/2 2xl:w-1/3 my-5 p-5 mt-5 mr-5 md:mr-10 lg:mr-20 xl:mr-32 ml-auto">
+      <div className="relative bg-white bg-opacity-95 rounded-md w-full md:w-1/2 2xl:w-1/3 p-5 mr-5 md:mr-10 lg:mr-20 xl:mr-32 ml-auto my-10">
         <EyeCatcher
           eyeCatcherClassName="absolute -right-4 -top-6 rotate-6"
           eyeCatcherVisible={eyeCatcherVisible}

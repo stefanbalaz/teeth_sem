@@ -126,7 +126,7 @@ function DynamicComponentRouter() {
       landingPageParameter === "impressum" ||
       landingPageParameterFormatted === "data-privacy"
     ) {
-      // Do not overwrite the value in local storage when the URL is /impressum
+      // Do not overwrite the value in local storage when the URL is /impressum or /data-privacy
       return;
     }
 
